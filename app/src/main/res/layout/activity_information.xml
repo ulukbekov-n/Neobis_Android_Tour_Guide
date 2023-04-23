@@ -6,4 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".InformationActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/firstCard"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="0dp"
+        android:clickable="false"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/photo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="411dp"
+                    android:src="@drawable/restil"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/textCard"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="0dp"
+        android:clickable="false"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/time"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Открыт до 24:00"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="#ADAEAE"
+            />
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/time"
+            android:text="15 km"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="25dp"
+            android:textColor="#ADAEAE"
+            />
+        <TextView
+            android:id="@+id/price"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Средний чек 800с"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="16dp"
+            />
+        <TextView
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/descriptionInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Уютный интерьер и изысканная кухня сделают ваш обед или ужин незабываемым. Мы рады нашим гостям и всегда стремимся их приятно удивить.
+Меню ресторана и карта вин продуманы до мелочей, а наши официанты помогут при заказе подобрать блюдо на любой вкус и посоветуют подходящие напитки."
+            android:layout_marginTop="100dp"
+            android:textColor="#ADAEAE"
+            android:layout_marginLeft="16dp"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
 package com.example.neobis_android_tour_guide
-var cardsList = mutableListOf<Cards>()
+var cardList = mutableListOf<Cards>()
+val CARD_ID_EXTRA  = "bookExtra"
 data class Cards(var image: Int,
                  var name  : String,
                  val address: String,
                  val time:String ,
                  val distance: String,
-                 val id: Int? = cardsList.size)
+                 val description: String,
+                 val id: Int? = cardList.size)

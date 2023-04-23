@@ -6,18 +6,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.neobis_android_tour_guide.databinding.CardviewBinding
 
 
-class RestAdapter(private val cards: ArrayList<Cards>):RecyclerView.Adapter<CardViewHolder>() {
+class RestAdapter(private val card: ArrayList<Cards>,
+                  private val clickListener: CardClickListener
+                  ):RecyclerView.Adapter<CardViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val from = LayoutInflater.from(parent.context)
         val binding =CardviewBinding.inflate(from, parent,false)
-        return CardViewHolder(binding)
+        return CardViewHolder(binding,clickListener)
     }
 
 
-    override fun getItemCount(): Int = cards.size
+    override fun getItemCount(): Int = card.size
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
-        holder.bindCard(cards[position])
+        holder.bindCard(card[position])
     }
 
 
