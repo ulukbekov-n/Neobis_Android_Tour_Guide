@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.neobis_android_tour_guide.databinding.CardviewBinding
 
 
-class RestAdapter(private val card: ArrayList<Cards>,
+class RestAdapter(private val card: MutableList<Cards>,
                   private val clickListener: CardClickListener
                   ):RecyclerView.Adapter<CardViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {

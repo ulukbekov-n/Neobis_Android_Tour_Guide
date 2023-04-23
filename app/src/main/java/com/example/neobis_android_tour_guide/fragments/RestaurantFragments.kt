@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.neobis_android_tour_guide.*
 
-var cardArrayList = ArrayList<Cards>()
+//
+//    var cardList = ArrayList<Cards>()
 
-//    return inflater.inflate(R.layout.fragment_restaurant_fragment, container, false)
     private lateinit var adapter: RestAdapter
     private lateinit var recyclerView: RecyclerView
-//    private lateinit var cardsArrayList: ArrayList<Cards>
+//private lateinit var cardList: ArrayList<Cards>
 private fun dataInfo() {
     val card1 = Cards(
         R.drawable.rest1,
@@ -27,7 +27,7 @@ private fun dataInfo() {
                 "Меню ресторана и карта вин продуманы до мелочей, а наши официанты помогут при заказе подобрать блюдо на любой вкус и посоветуют подходящие напитки."
 
     )
-    cardArrayList.add(card1)
+    cardList.add(card1)
 
     val card2 = Cards(
         R.drawable.rest2,
@@ -39,7 +39,7 @@ private fun dataInfo() {
                 "Меню ресторана и карта вин продуманы до мелочей, а наши официанты помогут при заказе подобрать блюдо на любой вкус и посоветуют подходящие напитки."
 
     )
-    cardArrayList.add(card2)
+    cardList.add(card2)
 
     val card3 = Cards(
         R.drawable.rest3,
@@ -51,7 +51,7 @@ private fun dataInfo() {
                 "Меню ресторана и карта вин продуманы до мелочей, а наши официанты помогут при заказе подобрать блюдо на любой вкус и посоветуют подходящие напитки."
 
     )
-    cardArrayList.add(card3)
+    cardList.add(card3)
 
     val card4 = Cards(
         R.drawable.rest4,
@@ -63,7 +63,7 @@ private fun dataInfo() {
                 "Меню ресторана и карта вин продуманы до мелочей, а наши официанты помогут при заказе подобрать блюдо на любой вкус и посоветуют подходящие напитки."
 
     )
-    cardArrayList.add(card4)
+    cardList.add(card4)
 
     val card5 = Cards(
         R.drawable.rest5,
@@ -75,7 +75,7 @@ private fun dataInfo() {
                 "Меню ресторана и карта вин продуманы до мелочей, а наши официанты помогут при заказе подобрать блюдо на любой вкус и посоветуют подходящие напитки."
 
     )
-    cardArrayList.add(card5)
+    cardList.add(card5)
 
     val card6 = Cards(
         R.drawable.rest6,
@@ -86,14 +86,14 @@ private fun dataInfo() {
         "КайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайфКайф КайфКайфКайфКайф КайфКайфКайф Кайф КайфКайфКайфКайфКайф"
 
     )
-    cardArrayList.add(card6)
-
-    cardList.add(card1)
-    cardList.add(card2)
-    cardList.add(card3)
-    cardList.add(card4)
-    cardList.add(card5)
     cardList.add(card6)
+
+    com.example.neobis_android_tour_guide.cardList.add(card1)
+    com.example.neobis_android_tour_guide.cardList.add(card2)
+    com.example.neobis_android_tour_guide.cardList.add(card3)
+    com.example.neobis_android_tour_guide.cardList.add(card4)
+    com.example.neobis_android_tour_guide.cardList.add(card5)
+    com.example.neobis_android_tour_guide.cardList.add(card6)
 }
 class RestaurantFragments : Fragment(),CardClickListener {
 
@@ -114,7 +114,7 @@ class RestaurantFragments : Fragment(),CardClickListener {
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = RestAdapter(cardArrayList,mainActivity)
+        adapter = RestAdapter(com.example.neobis_android_tour_guide.cardList,mainActivity)
         recyclerView.adapter = adapter
 
     }
